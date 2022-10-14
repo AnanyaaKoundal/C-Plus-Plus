@@ -1,13 +1,18 @@
 #include <iostream>
 using namespace std;
 
+// Creating a class for circular linked list
 class C_Queue {
+    // initialise a pointer that will be used to dynamically allocate size of
+    // the queue each time the program is run
     int *queue;
 
  public:
     int size, first, last;
     C_Queue(int s) {
         size = s;
+        // initialising an array of the size user gave in contructor while
+        // creating class object
         queue = new int(size);
         first = last = -1;
     }
@@ -70,6 +75,7 @@ void C_Queue::display() {
     }
     cout << endl;
 }
+
 void menu() {
     cout << "\n1. Enqueue";
     cout << "\n2. Dequeue";
